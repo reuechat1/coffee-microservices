@@ -61,4 +61,6 @@ jobs:
         revision-service-account-id: ${{ secrets.YC_SA_ID }} 
         revision-memory: 4GB
         revision-cpu: 2
-        revision-environment-variables: PORT=8083
+      env:  
+          PORT: 8080
+        
