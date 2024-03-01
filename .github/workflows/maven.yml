@@ -42,7 +42,7 @@ jobs:
 
     - name: Run Tests
       run: |
-        cd pc-service
+        cd menu-service
         mvn test
     
 
