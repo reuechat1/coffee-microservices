@@ -25,6 +25,17 @@ jobs:
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/order-service:latest
 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt'
+        java-version: '17'
+
   build-and-push-yc:
     runs-on: ubuntu-latest
     steps:
