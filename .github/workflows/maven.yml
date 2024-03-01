@@ -34,7 +34,17 @@ jobs:
       uses: actions/setup-java@v2
       with:
         distribution: 'adopt'
-        java-version: '17'
+        java-version: '17'  # Или любая другая нужная версия
+
+    - name: Set up Maven
+      run: |
+        sudo apt-get install -y maven
+
+    - name: Run Tests
+      run: |
+        cd pc-service
+        mvn test
+    
 
   build-and-push-yc:
     runs-on: ubuntu-latest
